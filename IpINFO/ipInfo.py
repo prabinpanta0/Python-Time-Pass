@@ -3,7 +3,7 @@ import requests
 import json  # Import the json module
 import os
 
-# Replace 'YOUR_ACCESS_TOKEN' with your actual access token
+
 access_token = '9423813a0273d3'
 
 # Create an instance of the ipinfo client
