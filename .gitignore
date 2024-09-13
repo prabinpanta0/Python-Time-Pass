@@ -1,0 +1,14 @@
+# file type .env
+.env
+
+# file type .env.local
+.env.local
+
+# Output folder
+Output
+
+# Dependency folder
+node_modules
+
+# Log folder
+logs

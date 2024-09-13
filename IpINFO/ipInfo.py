@@ -1,10 +1,15 @@
 import ipinfo
 import requests
-import json  # Import the json module
+import json
 import os
+from dotenv import load_dotenv
 
+# Load environment variables from a .env file
+load_dotenv()
 
-access_token = '9423813a0273d3'
+# Get the access token from the environment variable
+access_token = os.getenv('IPINFO_ACCESS_TOKEN')
+# print(access_token)
 
 # Create an instance of the ipinfo client
 handler = ipinfo.getHandler(access_token)
@@ -36,13 +41,16 @@ try:
         "Timezone": timezone
     }
     
+    # Ensure the output directory exists
+    output_dir = os.path.join(os.getcwd(), 'Output')
+    os.makedirs(output_dir, exist_ok=True)
+    
     # Save the location details to a JSON file
-    output_path = os.path.join(os.getcwd(),  'Output', 'location_info.json')
+    output_path = os.path.join(output_dir, 'location_info.json')
     
     # Save the location details to a JSON file in the output folder
     with open(output_path, 'w') as f:
         json.dump(location_data, f, indent=4)
-    
     
     # Print the location details
     print(f"City: {city}")

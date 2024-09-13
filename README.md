@@ -7,6 +7,7 @@ This repository contains a collection of Python programs for various purposes.
 - [IpInfo](#ipinfo)
 - [Lock_Unlock](#lock_unlock)
 - [PingWebsite](#pingwebsite)
+- [Simple_Map](#simple_map)
 
 ## IpInfo
 
@@ -16,7 +17,7 @@ The `ipInfo.py` script uses the `ipinfo` library to retrieve the location detail
 
 This folder contains two Python scripts, `lock.py` and `unlock.py`, that provide functionality to lock and unlock files and folders, respectively.
 
-### lock.py
+### lock
 
 The `lock.py` script recursively traverses a specified directory and performs the following actions:
 
@@ -27,7 +28,7 @@ The `lock.py` script recursively traverses a specified directory and performs th
 
 The script assumes the presence of a `Lock_Unlock` folder containing a `Lock` folder in the current working directory.
 
-### unlock.py
+### unlock
 
 The `unlock.py` script is designed to reverse the actions performed by the `lock.py` script. It recursively traverses the hidden `Lock` folder and performs the following actions:
 
@@ -46,42 +47,48 @@ The `WebsitePing` class encapsulates the functionality of pinging a website. It 
 
 When executed, the script prompts the user to enter the URL to ping, creates an instance of the `WebsitePing` class, and starts the pinger loop. The loop continuously pings the specified website and prints a message indicating whether the website is reachable or not.
 
-## Prerequisites
+## Simple_Map
 
-To run these programs, you need to have Python installed on your system. Additionally, the `ipInfo.py` script requires the `ipinfo` library, which can be installed using `pip`: 
+The `Simple_Map` folder contains a script that generates a simple interactive map using the `folium` library. This script demonstrates how to create and customize maps in Python.
+
+The script takes a set of geographical coordinates as input and plots them on the map. It also allows for adding markers and popups to specific locations, providing a visual representation of the data.
+
+To use the script, you need to have the `folium` library installed, which can be done using `pip`:
+
 ```bash
-pip install ipinfo.io
+pip install folium
+pip install geocoder
 ```
+
 ## Project Structure
 
 The project is organized as follows:
 
-```md
-.
+```tree
+C:.
 ├───IpINFO
 ├───Lock_Unlock
-│   └───Lock
-│       └───Folder
 ├───Output
-└───PingWebsite
+├───PingWebsite
+└───Simple_Map
+    └───Locations
 ```
 
 ## Usage
 
 1. Clone the repository:
-
-```bash
-git clone https://github.com/your-username/python-projects.git
-```
+`git clone https://github.com/prabinpanta0/Python-Time-Pass.git`
 
 2. Navigate to the desired project folder.
 3. Follow the specific instructions for each project as mentioned in the respective sections above.
 
-For example, to run the `pingloop.py` script:
+For example, to run the pingloop.py script:
+
 ```bash
 cd PingWebsite
 python pingloop.py
 ```
 
 ## Contributing
+
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
