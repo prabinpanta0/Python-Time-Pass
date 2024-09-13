@@ -36,8 +36,8 @@ try:
         "City": city,
         "Region": region,
         "Country": country,
-        "Latitude": latitude,
-        "Longitude": longitude,
+        # "Latitude": latitude,
+        # "Longitude": longitude,
         "Timezone": timezone
     }
     
